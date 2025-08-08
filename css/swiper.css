@@ -97,7 +97,7 @@
 }
 
 @media (max-width: 649.98px) {
-  .swiper.custom__swiper .swiper-wrapper,
+   .swiper-wrapper,
   .swiper.clubs__swiper {
     padding-top: 0px;
   }
