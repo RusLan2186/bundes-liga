@@ -1,5 +1,5 @@
 .swiper-wrapper {
-  padding-top: 60px;
+  padding-top: 3.75rem; /* 60px */
   display: flex;
   align-items: stretch;
   height: 100%;
@@ -7,7 +7,7 @@
 
 .swiper.clubs__swiper {
   position: relative;
-  padding-top: 60px;
+  padding-top: 3.75rem; /* 60px */
 }
 
 .swiper.custom__swiper .swiper-slide {
@@ -23,16 +23,16 @@
 }
 
 .swiper__body {
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem; /* 25px */
 }
 
 .swiper__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 115px;
+  width: 7.1875rem; /* 115px */
   position: absolute;
-  top: 23px;
+  top: 1.4375rem; /* 23px */
   right: 0;
 }
 
@@ -41,8 +41,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   transition: 0.3s background-color;
@@ -50,7 +50,7 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px !important;
+  font-size: 1.25rem !important; /* 20px */
   color: #cf152d;
   font-weight: 700;
   transition: 0.3s color;
@@ -58,11 +58,11 @@
 }
 
 .swiper-button-next::after {
-  right: -1px;
+  right: -0.0625rem; /* -1px */
 }
 
-.swiper-button-prev::after{
-  right: 1px;
+.swiper-button-prev::after {
+  right: 0.0625rem; /* 1px */
 }
 
 .swiper-button-next:hover,
@@ -82,8 +82,8 @@
 
 .swiper__pagination span.swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem; /* 12px */
+  height: 0.75rem; /* 12px */
 }
 
 .swiper__pagination span.swiper-pagination-bullet-active {
@@ -97,9 +97,9 @@
 }
 
 @media (max-width: 649.98px) {
-   .swiper-wrapper,
+  .swiper-wrapper,
   .swiper.clubs__swiper {
-    padding-top: 0px;
+    padding-top: 0;
   }
   .swiper__buttons {
     display: none;
