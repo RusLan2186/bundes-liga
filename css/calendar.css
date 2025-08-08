@@ -1,23 +1,23 @@
 /* --- СТИЛИ КНОПОК И ШАПКИ --- */
 .fc .fc-col-header-cell-cushion {
   display: inline-block;
-  padding: 10px 0px;
+  padding: 0.625rem 0rem; /* 10px 0px */
   color: rgb(0, 0, 0);
 }
 
 .fc .fc-toolbar {
   background-color: #c7152d;
   color: white;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 0.625rem; /* 10px */
+  border-radius: 0.25rem; /* 4px */
 }
 
 .fc .fc-button {
   background-color: #ffffff;
   color: #c7152d;
   border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
+  border-radius: 0.25rem; /* 4px */
+  padding: 0.375rem 0.75rem; /* 6px 12px */
   font-weight: 600;
 }
 .fc .fc-button:hover {
@@ -33,9 +33,9 @@
   color: #999;
   cursor: not-allowed;
 }
- /* месяц */
-.fc .fc-toolbar-title{
-  font-size: 20px;
+/* месяц */
+.fc .fc-toolbar-title {
+  font-size: 1.25rem; /* 20px */
 }
 
 /* --- СОБЫТИЯ --- */
@@ -46,9 +46,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   text-align: center;
-  padding: 10px;
+  padding: 0.625rem; /* 10px */
   background-color: #ffffff;
   border: none;
 }
@@ -58,8 +58,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 4px;
+  gap: 0.625rem; /* 10px */
+  margin-bottom: 0.25rem; /* 4px */
 }
 .team {
   display: flex;
@@ -73,32 +73,32 @@
 }
 
 .team-logo {
-  width: 34px;
-  height: 34px;
+  width: 2.125rem; /* 34px */
+  height: 2.125rem; /* 34px */
   object-fit: contain;
 }
 .team-code {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
 }
 .time {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   font-weight: bold;
-  min-width: 30px;
+  min-width: 1.875rem; /* 30px */
   color: #000000;
 }
 .event-bottom {
-  margin-top: 4px;
+  margin-top: 0.25rem; /* 4px */
 }
 
 .match-center-btn {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem; /* 4px 8px */
   background-color: #c7152d;
   color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500px;
+  border-radius: 0.5rem; /* 8px */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
   text-decoration: none;
   transition: 0.3s all ease 0s;
   text-transform: uppercase;
@@ -109,37 +109,26 @@
 }
 
 /* --- СТИЛИ ЯЧЕЕК ДНЕЙ --- */
-
-.fc-scrollgrid-sync-table {
-
-}
-
 .fc-view-harness.fc-view-harness-active {
-  height: 700px !important;
+  height: 43.75rem !important; /* 700px */
   overflow: hidden;
-}
-.fc .fc-day.fc-daygrid-day {
-}
-
-.fc .fc-daygrid-day {
-  height: auto !important;
 }
 
 .fc .fc-daygrid-day-frame {
-  padding: 4px;
+  padding: 0.25rem; /* 4px */
 }
 
 .fc .fc-daygrid-event {
   height: auto !important;
   white-space: normal;
   display: block;
-  margin: 4px 0;
+  margin: 0.25rem 0; /* 4px 0 */
 }
 
 .fc .fc-daygrid-day.fc-day-today {
   background-color: #ffffff;
 }
-.fc .fc-day-today .fc-daygrid-day-number{
+.fc .fc-day-today .fc-daygrid-day-number {
   color: #c7152d;
   font-weight: 700;
 }
@@ -150,35 +139,35 @@
 
 @media (max-width: 1199.98px) {
   .team-logo {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem; /* 25px */
+    height: 1.5625rem; /* 25px */
     object-fit: contain;
   }
   .team-code {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
   }
   .time {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     font-weight: bold;
-    min-width: 30px;
+    min-width: 1.875rem; /* 30px */
   }
   .match-center-btn {
-    padding: 4px 6px;
+    padding: 0.25rem 0.375rem; /* 4px 6px */
     background-color: #c7152d;
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
   }
 }
 
 @media (max-width: 991.98px) {
   .fc .fc-daygrid-day-top {
     background-color: #c7152d;
-    padding: 10px;
+    padding: 0.625rem; /* 10px */
   }
 
   .fc .fc-daygrid-day-top a {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
   }
   .fc-daygrid-body,
   .fc-daygrid-week {
@@ -198,8 +187,7 @@
     display: block;
     width: 100% !important;
     box-sizing: border-box;
-    padding: 10px;
-    /* border-bottom: 1px solid #ddd; */
+    padding: 0.625rem; /* 10px */
   }
 
   .fc-event {
@@ -208,23 +196,23 @@
   }
 
   .team-logo {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem; /* 45px */
+    height: 2.8125rem; /* 45px */
     object-fit: contain;
   }
   .team-code {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
   }
   .time {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: bold;
-    min-width: 30px;
+    min-width: 1.875rem; /* 30px */
   }
   .match-center-btn {
-    padding: 8px 15px;
+    padding: 0.5rem 0.9375rem; /* 8px 15px */
     background-color: #c7152d;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     width: 100%;
   }
 }
