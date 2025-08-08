@@ -141,18 +141,17 @@
   }
 
   .cups__item {
-
-  font-size: 1.1rem;
-}
+    font-size: 1.1rem;
+  }
 
   .cup__title {
     font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
   }
-  .cup__img {
+  /* .cup__img {
     height: 10.625rem;
-  }
+  } */
 
   .player__footer .fs--40 {
     font-size: 2.1rem;
