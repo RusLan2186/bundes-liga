@@ -1,0 +1,314 @@
+.review__img_block {
+  padding-bottom: 40%;
+}
+.review__info_block {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+  margin-top: -180px;
+}
+.review-info__head {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.review-info__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.review-info__team {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  column-gap: 20px;
+  text-align: center;
+}
+
+.review-info__team span {
+  font-size: 24px;
+}
+
+.review__team_logo {
+  height: 70px;
+}
+.review-info__score {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.review-info__score p {
+  font-size: 40px;
+}
+
+.goals__block {
+  row-gap: 15px;
+  display: flex;
+  flex-basis: 30%;
+}
+.goals__item {
+  display: grid;
+  column-gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  grid-template-columns: 80% 15%;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.goal__icon {
+  height: 30px;
+}
+.game__stats_rows {
+  display: grid;
+  grid-template-columns: 69% 1fr;
+  column-gap: 30px;
+}
+
+/* game statistic =================================================================== */
+.game-stat {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.game-stat__head {
+  padding: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-border-after: 0.125rem solid #bbb;
+  border-block-end: 0.125rem solid #bbb;
+}
+
+.game-stat__title {
+  font-size: 21px;
+  margin-bottom: 0;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.game-stat__item:not(:last-child) {
+  border-bottom: 1px solid #f4f2f6;
+}
+
+.game-stat__item:last-child {
+  border-bottom-width: 0;
+}
+
+.item-game-stat {
+  padding: 0.75rem;
+}
+.item-game-stat__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.item-game-stat__value {
+  width: 50px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.item-game-stat__label {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.item-game-stat__row {
+  display: grid;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+.item-game-stat__line {
+  height: 8px;
+  background: rgb(207, 21, 45);
+  border-radius: 3px;
+}
+.item-game-stat__line:last-child {
+  background-color: #8d8d8d;
+}
+
+.review__post_rows {
+  display: grid;
+  grid-template-columns: 69% 1fr;
+  column-gap: 30px;
+}
+
+.aside-review__video_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+/* =================================================================== */
+
+@media (max-width: 1199.98px) {
+  .game__stats_rows {
+    grid-template-columns: 65% 1fr;
+  }
+
+  .review__team_logo {
+    height: 50px;
+  }
+
+  .review-info__team span {
+    font-size: 20px;
+  }
+  .goals__item {
+    font-size: 18px;
+  }
+
+  .goal__icon {
+    height: 25px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .review__head_block {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .review__info_block {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .review-info__team {
+    column-gap: 10px;
+  }
+  .review-info__score {
+    column-gap: 10px;
+  }
+
+  .game__stats_rows {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    column-gap: 0;
+  }
+
+  .review__post_rows {
+    grid-template-columns: 65% 1fr;
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .review__img_block {
+    padding-bottom: 60%;
+  }
+  .review-info__head {
+    font-size: 16px;
+  }
+  .review-info__team {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+  }
+
+  .review__team_logo {
+    height: 40px;
+  }
+
+  .review-info__team span {
+    font-size: 18px;
+  }
+  .goals__item {
+    font-size: 16px;
+  }
+
+  .goal__icon {
+    height: 20px;
+  }
+
+  .review-info__score p {
+    font-size: 30px;
+  }
+
+  .item-game-stat__value {
+    font-size: 18px;
+  }
+
+  .review__post_rows {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+
+  .aside-review__video_content {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0px;
+    column-gap: 15px;
+  }
+
+  .aside-review__video_content article {
+    width: 100%;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .review-info__body {
+    align-items: flex-center;
+    justify-content: space-between;
+  }
+
+  .review__team_logo {
+    height: 35px;
+  }
+  .review-info__team span {
+    font-size: 15px;
+  }
+  .review-info__score p {
+    font-size: 26px;
+  }
+
+  .goals__item {
+    font-size: 14px;
+  }
+
+  .aside-review__video_content {
+    flex-direction: column;
+    row-gap: 15px;
+    column-gap: 0px;
+  }
+}

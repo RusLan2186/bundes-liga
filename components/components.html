@@ -1,0 +1,173 @@
+<!-- компонент title -->
+
+{% component 'title' with {'text': 'news and statistics',} %}
+
+<!-- подключение базы данных -->
+
+{% set posts = db('1754291349778')->getItems('posts') %}
+
+<!-- карточка поста -->
+
+{% foreach posts as post %}
+
+<a
+  href="{{ absolute_url_lang('/post/' ~ post.id) }}"
+  class="link-reset media__card hover-text"
+>
+  <div class="image-block pb-50pcr">
+    <img class="media__img ibg" src="{{ post.img }}" alt="{{ post.title }}" />
+  </div>
+  <div class="media__footer">
+    <h4 class="mb-reset media__title">{{ post.title }}</h4>
+    <div class="media__description">
+      <p class="mb-reset text-grey">{{ post.description }}</p>
+    </div>
+    <p class="text--red mb-reset">{{ post.created_at }}</p>
+  </div>
+</a>
+{% endforeach %}
+
+<!-- получение id для страницы (куда переходим, сразу под section) -->
+
+{% set postId = params.postId %}
+
+<!-- получение одного поста из бд (сразу под section) -->
+
+{% set post = db('1754291349778')->getItem('posts', {'id': postId}) %}
+
+<!-- динамический пост -->
+
+<div class="post__content flx-clmn">
+  {% if post %}
+  <div class="post__img_block image-block">
+    <img class="media__img ibg" src="{{ post.img }}" alt="{{post.title}}" />
+  </div>
+  <div class="post__text_block">
+    <p>{{post.title}}</p>
+    <p class="mb-reset">{{post.description}}</p>
+  </div>
+  {% else %}
+  <p>Пост не найден.</p>
+  {% endif %}
+</div>
+
+{% set is_index = is_current_route('Index') %} {% set is_post =
+is_current_route('Post') %} {% set is_video-post =
+is_current_route('Video-post') %} {% set is_news = is_current_route('News') %}
+{% set is_review = is_current_route('Review') %} {% set is_stats =
+is_current_route('Stats') %} {% set is_history = is_current_route('History') %}
+{% set is_calendar = is_current_route('Calendar') %} {% set is_results =
+is_current_route('Results') %} {% set is_live = is_current_route('Live') %} {%
+set is_video = is_current_route('Video') %} {% set is_club =
+is_current_route('Club') %} {% set is_clubs = is_current_route('Clubs') %} {%
+set is_player = is_current_route('Player') %} {% set is_contact =
+is_current_route('Contact') %}
+
+<li>
+  <a
+    href="{{ route_lang('Post', 'auto', {'postId': 2}) }}"
+    class="{{ is_post ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.post')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Video-post', 'auto', {'videoPostId': 2}) }}"
+    class="{{ is_video-post ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.video-post')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('News', 'auto' )}}"
+    class="{{ is_news ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.news')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Review', 'auto', {'reviewId': 2}) }}"
+    class="{{ is_review ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.review')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Stats', 'auto', {'statsId': 2}) }}"
+    class="{{ is_stats ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.stats')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('History', 'auto', {'historysId': 2}) }}"
+    class="{{ is_history ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.history')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Calendar', 'auto' )}}"
+    class="{{ is_calendar ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.calendar')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Results', 'auto' )}}"
+    class="{{ is_results ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.results')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Video', 'auto' )}}"
+    class="{{ is_video ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.video')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Live', 'auto' )}}"
+    class="{{ is_live ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.live')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Club', 'auto', {'clubId': 2}) }}"
+    class="{{ is_club ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.club')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Clubs', 'auto' )}}"
+    class="{{ is_clubs ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.clubs')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Player', 'auto', {'playerId': 2}) }}"
+    class="{{ is_player ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.player')}}/2</a
+  >
+</li>
+<li>
+  <a
+    href="{{ route_lang('Contact', 'auto' )}}"
+    class="{{ is_contact ? 'active' : 'link-reset header__nav_link' }}"
+    >{{t('header.contact')}}/contact</a
+  >
+</li>
+
+<li>
+  <a class="link-reset header__nav_link" href="https://bundesliga.pt/clubs.html"
+    >{{ t('header.clubs') }}</a
+  >
+</li>
+<li><a class="link-reset header__nav_link" href="./player.html">player</a></li>
+<li>
+  <a class="link-reset header__nav_link" href="./contact.html">contact</a>
+</li>

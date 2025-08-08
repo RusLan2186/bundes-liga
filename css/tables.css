@@ -1,0 +1,74 @@
+/* === ГЛАВНЫЕ СЕТКИ === */
+.grid-pts-tbl {
+  display: grid;
+  grid-template-columns: 8% 25% repeat(8, 1fr);
+}
+
+.grid-pts-sm {
+  display: grid;
+  grid-template-columns: 10% 35% repeat(5, 1fr);
+}
+
+/* === ЗАГОЛОВОК ТАБЛИЦЫ === */
+.table__head {
+  background-color: rgb(207, 21, 45);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* === ТЕЛО ТАБЛИЦЫ === */
+.table__body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-style: solid;
+  border-width: thin;
+  border-top-width: 0;
+  border-color: rgb(0, 0, 0);
+  align-items: center;
+}
+
+/* === ЯЧЕЙКА КОМАНДЫ === */
+.table__team_block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* === МОДИФИКАТОРЫ ДЛЯ SMALL === */
+.grid-pts-sm.table__body,
+.grid-pts-sm .table__team_block {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.grid-pts-sm .table__team_block img {
+  height: 25px;
+}
+
+/* === АДАПТИВ === */
+@media (min-width: 799.98px) {
+  .pts-table--sm {
+    display: none;
+  }
+}
+
+@media (max-width: 799.98px) {
+  .pts-table--big {
+    display: none;
+  }
+}

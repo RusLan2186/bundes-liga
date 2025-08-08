@@ -1,0 +1,82 @@
+{% set is_index = is_current_route('Index') %}
+{% set is_catalog = is_current_route('Catalog') %}
+{% set is_about = is_current_route('About') %}
+{% set is_book = is_current_route('Book') %}
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config('app.name', 'Библиотека книг') }}{% endblock %}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <a href="{{ absolute_url_lang('/') }}">📚 {{ t('site.title', 'Библиотека книг') }}</a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="{{ route_lang('Index', 'auto') }}" class="{{ is_index ? 'active' : '' }}">{{ t('nav.home') }}</a></li>
+                        <li><a href="{{ route_lang('Catalog', 'auto') }}" class="{{ is_catalog ? 'active' : '' }}">{{ t('nav.catalog') }}</a></li>
+                        <li><a href="{{ route_lang('About', 'auto') }}" class="{{ is_about ? 'active' : '' }}">{{ t('nav.about') }}</a></li>
+                        <li><a href="{{ route_lang('Book', 'auto', {'bookid': 3}) }}" class="{{ is_book ? 'active' : '' }}">book/2</a></li>
+                    </ul>
+                </nav>
+                <div class="search-form">
+                    <form method="GET" action="{{ absolute_url_lang('/catalog') }}">
+                        <input type="text" name="search" placeholder="{{ t('search.placeholder', 'Поиск книг...') }}" value="{{ request.input('search', '') }}">
+                        <button type="submit">{{ t('search.button', 'Найти') }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ t('footer.contact', 'Контакты') }}</h3>
+                    <p>{{ t('footer.address', 'ул. Пушкина, д.10') }}</p>
+                    <p>{{ t('footer.phone', 'Тел: +7 (495) 123-45-67') }}</p>
+                    <p>{{ t('footer.email', 'Email: library@example.com') }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>{{ t('footer.schedule', 'Режим работы') }}</h3>
+                    <p>{{ t('footer.weekdays', 'Пн-Пт: 9:00-19:00') }}</p>
+                    <p>{{ t('footer.weekend', 'Сб-Вс: 10:00-17:00') }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>{{ t('footer.languages', 'Языки') }}</h3>
+                    <div class="language-switcher">
+                        {% foreach available_locales as lang %}
+                            <a href="{{ current_url_lang(lang) }}" class="{{ lang == locale ? 'active' : '' }}">
+                                {% if lang == 'ru' %}Русский
+                                {% elseif lang == 'en' %}English
+                                {% else %}{{ lang|upper }}
+                                {% endif %}
+                            </a>
+                        {% endforeach %}
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ date('Y') }} {{ t('site.title', 'Библиотека книг') }}. {{ t('footer.rights', 'Все права защищены.') }}</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
+
+

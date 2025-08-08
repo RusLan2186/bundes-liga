@@ -1,0 +1,51 @@
+.live__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.live__card {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+}
+.live__info {
+  padding-left: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .live__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .live__info .logo-50 {
+    height: 30px;
+    width: 30px;
+  }
+  .live__team_name {
+    font-size: 16px;
+  }
+
+
+
+  .live__info .link__btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 549.98px) {
+  .live__card {
+    display: grid;
+    grid-template-columns:40% 1fr;
+  }
+
+  .live__score{
+    font-size: 17px;
+  }
+}
+@media (max-width: 449.98px){
+    .live__card {
+      grid-template-columns:1fr;
+  }
+}
